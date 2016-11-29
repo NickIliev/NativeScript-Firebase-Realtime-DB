@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\internal_impl-24.2.1_31c3396624eddb0f8b85acb257db4bc567b81500.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\cosmosfirebase\runtime\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="9909ad5fcc13fcc60529cfa340ee7e0abc79af38">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\cosmosfirebase-runtime-unspecified_7fb3364407efa083f7213124b02db0346ff6b1e6.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-core-ui-24.2.1_725aba8820b88677595ae132e8b5d411cd55b3e3.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.android.gms-play-services-tasks-9.8.0_a2a2294f9cc23fd8346bd8494b414c04d62279bd.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-auth-module-9.8.0_fca6312dfa5b27304ad41d92bb8b0c8451345f87.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\firebase-release\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="c9516c20ad330d844b3275d9c3acb0b798b6d8ae">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-firebase-release_94ccf78ee46d3f617bbe6bd83d6864cdc677f1aa.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-core-utils-24.2.1_d9de97ce3909fdbe80c2a1a6fdfb694ecead73d9.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-vector-drawable-24.2.1_a4056caa24c48685367030b9ac37f27b4eead06e.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-database-9.8.0_2b13f2c4869718121b17eaf22514884c1a6a6e56.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\internal_impl-24.2.1_e8eb5215a90e4f86ea513972ae016bdf9d9cdaee.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-common-9.8.0_233f8066d774542331d16237813853423aa06c55.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\internal_impl-24.2.1_9c36adae8ddf78cd953fe380dce5f587586add07.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\cosmosfirebase\runtime\unspecified\jars\libs\binding-generator.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="4290aba11bda501dbadc2dd5c4b08282c0bbfeb8">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\binding-generator_8120a2ed4a075ee3542b23d708b47bf708de4ca2.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-auth-9.8.0_6ac98cde32cbb3e24f1ec4a18686786fa42b00cf.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-media-compat-24.2.1_f129d42cb355dbce3ee2c664fe6ce9452b9f67cd.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-fragment-24.2.1_3025040ab0a8adba0193c29c8a5be06988b001e0.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.android.gms-play-services-base-9.8.0_ce3ddd5a8fe81f5caf433175adc64cdf2842c96a.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-compat-24.2.1_cdfb4a9bd60900d3367b68a0574fb8ff16aec5b8.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="9ff04cc3470178a44512624036751a803418c2ca">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-analytics-9.8.0_489a476cda95834280f5b6b99b0283de4558019e.jar" />
+    </item>
+    <item
+        jar="D:\INSTALLED\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\support-annotations-24.2.1_3e2a30b9052a7da48aac3b071b5b6a07c3dc3843.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-iid-9.8.0_e025edfd0da276709fb56a0c2fc2b25479ccadd2.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-animated-vector-drawable-24.2.1_f4d7826a67c368db45269b05db204eb49fbd9e7b.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\widgets-release\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="9eec987a0056adc79d607b32e7e1c41997a434a7">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-widgets-release_0c7df5fa659bad172e2b6dc2c49818c37046ea8f.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-auth-common-9.8.0_c407dc58538a474c0ba7ddefd0c3420e95d6f33a.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-appcompat-v7-24.2.1_f8ea402f1b8b87914fccbb2ab7c2a0ea68682b0f.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\internal_impl-24.2.1_cca6b94e04a2ff9544256d8741dd7a6445e92589.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="b4671be3d1288bf4e5f527cd33e42909fbe4ecc6">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-crash-9.8.0_463c588a455e077116a2f85b3c3af076e4e6c0d4.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-database-connection-9.8.0_e02804054986968e9a4da877d92299ae330d5abf.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-v4-24.2.1_4e868be5a4563368b39e759844bae974bd7d5d54.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="190a642ba16d1421296a4d794606279b80039c59">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-analytics-impl-9.8.0_948c5240f9c11c4bc8fa7304002481e34a0685ec.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.android.gms-play-services-basement-9.8.0_635591b74286cb176185dcf05b95965b2e12e5b2.jar" />
+    </item>
+    <item
+        jar="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="D:\git-NickIliev\cosmos-firebase\platforms\android\build\intermediates\pre-dexed\F0F1\debug\internal_impl-24.2.1_43eee3d369be00a0601f61b294b7a34a60152ad4.jar" />
+    </item>
+
+</items>
