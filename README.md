@@ -2,8 +2,8 @@ POC Application for usage of Firebase Realtime DB in NativeScript application.
 
 Steps to recreate project from zero.
 
-- Create Firebase account and add project.
-- Generate config files from [https://console.firebase.google.com](https://console.firebase.google.com)
+- Create your NativeScript application `tns create myFirebaseApp --tsc`
+- Create Firebase account and add project. Use your package id to generate `google-services.json` (Android) and `GoogleServices-info.plist`(iOS). Generate these config files from [https://console.firebase.google.com](https://console.firebase.google.com)
 - place `google-services.json` located in _platforms/android_
 - place `GoogleServices-info.plist` located in _app/App_Resources/iOS_
 
