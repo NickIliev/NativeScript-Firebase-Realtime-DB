@@ -7,6 +7,8 @@ firebase._launchNotification = null;
 
 // we need to cache and restore the context, otherwise the next invocation is broken
 firebase._rememberedContext = null;
+firebase._googleSignInIdToken = null;
+firebase._facebookAccessToken = null;
 
 var fbCallbackManager = null;
 var GOOGLE_SIGNIN_INTENT_ID = 123;
@@ -51,7 +53,9 @@ firebase.toHashMap = function(obj) {
   var node = new java.util.HashMap();
   for (var property in obj) {
     if (obj.hasOwnProperty(property)) {
-      if (obj[property] !== null) {
+      if (obj[property] === null) {
+        node.put(property, null);
+      } else {
         switch (typeof obj[property]) {
           case 'object':
             node.put(property, firebase.toHashMap(obj[property], node));
@@ -635,7 +639,7 @@ firebase.login = function (arg) {
           arg.tokenProviderFn()
               .then(
                   function (token) {
-                    firebaseAuth.signInWithCustomToken(arg.token).addOnCompleteListener(onCompleteListener);
+                    firebaseAuth.signInWithCustomToken(token).addOnCompleteListener(onCompleteListener);
                   },
                   function (error) {
                     reject(error);
@@ -654,8 +658,8 @@ firebase.login = function (arg) {
             fbCallbackManager,
             new com.facebook.FacebookCallback({
               onSuccess: function (loginResult) {
-                var token = loginResult.getAccessToken().getToken();
-                var authCredential = com.google.firebase.auth.FacebookAuthProvider.getCredential(token);
+                firebase._facebookAccessToken = loginResult.getAccessToken().getToken();
+                var authCredential = com.google.firebase.auth.FacebookAuthProvider.getCredential(firebase._facebookAccessToken);
 
                 var user = com.google.firebase.auth.FirebaseAuth.getInstance().getCurrentUser();
                 if (user) {
@@ -728,9 +732,9 @@ firebase.login = function (arg) {
             var success = googleSignInResult.isSuccess();
             if (success) {
               var googleSignInAccount = googleSignInResult.getSignInAccount();
-              var idToken = googleSignInAccount.getIdToken();
+              firebase._googleSignInIdToken = googleSignInAccount.getIdToken();
               var accessToken = null;
-              var authCredential = com.google.firebase.auth.GoogleAuthProvider.getCredential(idToken, accessToken);
+              var authCredential = com.google.firebase.auth.GoogleAuthProvider.getCredential(firebase._googleSignInIdToken, accessToken);
 
               firebase._mGoogleApiClient.connect();
 
@@ -770,6 +774,62 @@ firebase._alreadyLinkedToAuthProvider = function (user, providerId) {
     }
   }
   return false;
+};
+
+firebase.reauthenticate = function (arg) {
+  return new Promise(function (resolve, reject) {
+    try {
+      var user = com.google.firebase.auth.FirebaseAuth.getInstance().getCurrentUser();
+      if (user === null) {
+        reject("no current user");
+        return;
+      }
+
+      var authCredential = null;
+      if (arg.type === firebase.LoginType.PASSWORD) {
+        if (!arg.email || !arg.password) {
+          reject("Auth type emailandpassword requires an email and password argument");
+        } else {
+          authCredential = com.google.firebase.auth.EmailAuthProvider.getCredential(arg.email, arg.password);
+        }
+
+      } else if (arg.type === firebase.LoginType.GOOGLE) {
+        if (!firebase._googleSignInIdToken) {
+          reject("Not currently logged in with Google");
+          return;
+        }
+        authCredential = com.google.firebase.auth.GoogleAuthProvider.getCredential(firebase._googleSignInIdToken, null);
+
+      } else if (arg.type === firebase.LoginType.FACEBOOK) {
+        if (!firebase._facebookAccessToken) {
+          reject("Not currently logged in with Facebook");
+          return;
+        }
+        authCredential = com.google.firebase.auth.FacebookAuthProvider.getCredential(firebase._facebookAccessToken);
+      }
+
+      if (authCredential === null) {
+        reject("arg.type should be one of LoginType.PASSWORD | LoginType.GOOGLE | LoginType.FACEBOOK");
+        return;
+      }
+
+      var onCompleteListener = new com.google.android.gms.tasks.OnCompleteListener({
+        onComplete: function (task) {
+          if (task.isSuccessful()) {
+            resolve();
+          } else {
+            // TODO extract error
+            reject("Reathentication failed");
+          }
+        }
+      });
+      user.reauthenticate(authCredential).addOnCompleteListener(onCompleteListener);
+
+    } catch (ex) {
+      console.log("Error in firebase.reauthenticate: " + ex);
+      reject(ex);
+    }
+  });
 };
 
 firebase.resetPassword = function (arg) {
@@ -885,6 +945,49 @@ firebase.deleteUser = function (arg) {
       user.delete().addOnCompleteListener(onCompleteListener);
     } catch (ex) {
       console.log("Error in firebase.deleteUser: " + ex);
+      reject(ex);
+    }
+  });
+};
+
+firebase.updateProfile = function (arg) {
+  return new Promise(function (resolve, reject) {
+    try {
+      if (!arg.displayName && !arg.photoURL) {
+        reject("Updating a profile requires a displayName and / or a photoURL argument");
+      } else {
+        var firebaseAuth = com.google.firebase.auth.FirebaseAuth.getInstance();
+        var user = firebaseAuth.getCurrentUser();
+
+        if (user === null) {
+          reject("No current user");
+          return;
+        }
+
+        var onCompleteListener = new com.google.android.gms.tasks.OnCompleteListener({
+          onComplete: function (task) {
+            if (task.isSuccessful()) {
+              resolve();
+            } else {
+              reject("Updating a profile failed. " + (task.getException() && task.getException().getReason ? task.getException().getReason() : task.getException()));
+            }
+          }
+        });
+
+        var profileUpdateBuilder = new com.google.firebase.auth.UserProfileChangeRequest.Builder();
+
+        if (arg.displayName)
+          profileUpdateBuilder.setDisplayName(arg.displayName)
+
+        if (arg.photoURL)
+          profileUpdateBuilder.setPhotoUri(android.net.Uri.parse(arg.photoURL))
+
+        var profileUpdate = profileUpdateBuilder.build();
+
+        user.updateProfile(profileUpdate).addOnCompleteListener(onCompleteListener);
+      }
+    } catch (ex) {
+      console.log("Error in firebase.updateProfile: " + ex);
       reject(ex);
     }
   });
@@ -1205,11 +1308,19 @@ firebase.uploadFile = function (arg) {
       });
 
       if (arg.localFile) {
-        if (typeof(arg.localFile) != "object") {
+        if (typeof(arg.localFile) !== "object") {
           reject("localFile argument must be a File object; use file-system module to create one");
           return;
         }
 
+        // using 'putFile' (not 'putBytes') so Firebase can infer the mimetype
+        var localFileUrl = android.net.Uri.fromFile(new java.io.File(arg.localFile.path));
+        var uploadFileTask = storageReference.putFile(localFileUrl)
+            .addOnFailureListener(onFailureListener)
+            .addOnSuccessListener(onSuccessListener)
+            .addOnProgressListener(onProgressListener);
+
+        /*
         var error;
         var contents = arg.localFile.readSync(function(e) { error = e; });
 
@@ -1222,6 +1333,7 @@ firebase.uploadFile = function (arg) {
             .addOnFailureListener(onFailureListener)
             .addOnSuccessListener(onSuccessListener)
             .addOnProgressListener(onProgressListener);
+        */
 
       } else if (arg.localFullPath) {
 
@@ -1230,7 +1342,6 @@ firebase.uploadFile = function (arg) {
           return;
         }
 
-        // TODO there's prolly a more efficient way to get the file obj.. .android perhaps?
         var localFileUrl = android.net.Uri.fromFile(new java.io.File(arg.localFullPath));
         var uploadFileTask = storageReference.putFile(localFileUrl)
             .addOnFailureListener(onFailureListener)
@@ -1275,7 +1386,7 @@ firebase.downloadFile = function (arg) {
       var localFilePath;
 
       if (arg.localFile) {
-        if (typeof(arg.localFile) != "object") {
+        if (typeof(arg.localFile) !== "object") {
           reject("localFile argument must be a File object; use file-system module to create one");
           return;
         }

@@ -1,10 +1,10 @@
 [
     {
-        "merged": "D:\\git-NickIliev\\cosmos-firebase\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "D:\\git-NickIliev\\cosmos-firebase\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+        "merged": "D:\\git-NickIliev\\NativeScript-Firebase-Realtime-DB\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "D:\\git-NickIliev\\NativeScript-Firebase-Realtime-DB\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "D:\\git-NickIliev\\cosmos-firebase\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "D:\\git-NickIliev\\cosmos-firebase\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "D:\\git-NickIliev\\NativeScript-Firebase-Realtime-DB\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "D:\\git-NickIliev\\NativeScript-Firebase-Realtime-DB\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     }
 ]

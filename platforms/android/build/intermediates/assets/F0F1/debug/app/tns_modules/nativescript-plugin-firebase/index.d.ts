@@ -60,13 +60,13 @@ export enum QueryLimitType {
     LAST
 }
 
-export interface ServerValue {
+export enum ServerValue {
     /**
      * When for instance using setValue you can set a timestamp property to this placeholder value.
      * Example:
      *   updateTs: firebase.ServerValue.TIMESTAMP
      */
-    TIMESTAMP: any;
+    TIMESTAMP
 }
 
 /**
@@ -191,6 +191,12 @@ export interface LoginOptions {
     scope?: string[];
 }
 
+export interface ReauthenticateOptions {
+    type: LoginType;
+    email?: string;
+    password?: string;
+}
+
 /**
  * The returned object from the login function.
  */
@@ -234,6 +240,14 @@ export interface CreateUserResult {
 export interface CreateUserOptions {
     email: string;
     password: string;
+}
+
+/**
+ * The options object passed into the updateProfile function.
+ */
+export interface UpdateProfileOptions {
+    displayName?: string;
+    photoURL?: string;
 }
 
 /**
@@ -512,6 +526,8 @@ export module analytics {
 // Auth
 export function login(options: LoginOptions): Promise<User>;
 
+export function reauthenticate(options: ReauthenticateOptions): Promise<any>;
+
 export function getAuthToken(option: GetAuthTokenOptions): Promise<string>;
 
 export function logout(): Promise<any>;
@@ -521,6 +537,8 @@ export function sendEmailVerification(): Promise<any>;
 export function createUser(options: CreateUserOptions): Promise<CreateUserResult>;
 
 export function deleteUser(): Promise<any>;
+
+export function updateProfile(options: UpdateProfileOptions): Promise<any>;
 
 export function resetPassword(options: ResetPasswordOptions): Promise<any>;
 

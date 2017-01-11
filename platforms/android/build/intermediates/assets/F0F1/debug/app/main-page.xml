@@ -1,7 +1,8 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
   <StackLayout>
-    <Label text="Firebase test" class="title"/>
-    <Button text="Push Data to Firebase db" tap="pushData" />
-    <Button text="Query Data from Firebase db" tap="queryData" />
+    <Label text="Firebase DB Test" class="title"/>
+    <Button text="Set Values to DB" tap="setValues" />
+    <Button text="Push Data to Firebase DB" tap="pushData" />
+    <Button text="Query Data from Firebase DB" tap="queryData" />
   </StackLayout>
 </Page>

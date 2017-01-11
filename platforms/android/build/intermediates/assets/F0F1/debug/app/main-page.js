@@ -6,6 +6,14 @@ function navigatingTo(args) {
     var page = args.object;
 }
 exports.navigatingTo = navigatingTo;
+function setValues() {
+    // to store an array of JSON objects
+    firebase.setValue('/companies', [
+        { name: 'Telerik', country: 'Bulgaria' },
+        { name: 'Google', country: 'USA' }
+    ]);
+}
+exports.setValues = setValues;
 function pushData() {
     firebase.push('/users', {
         'first': 'Eddy',
@@ -48,16 +56,16 @@ function queryData() {
         //    value: 2000
         ///},
         // .. or 'chain' ranges like this:
-        ranges: [
-            {
-                type: firebase.QueryRangeType.START_AT,
-                value: 1999
-            },
-            {
-                type: firebase.QueryRangeType.END_AT,
-                value: 2000
-            }
-        ],
+        // ranges: [
+        //   {
+        //       type: firebase.QueryRangeType.START_AT,
+        //       value: 1999
+        //   },
+        //   {
+        //       type: firebase.QueryRangeType.END_AT,
+        //       value: 2000
+        //   }
+        // ],
         // only the first 2 matches
         // (note that there's only 1 in this case anyway)
         limit: {

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\git-NickIliev\\cosmos-firebase\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\values-hdpi-v4\\values-hdpi-v4.xml",
+        "outputFile": "D:\\git-NickIliev\\NativeScript-Firebase-Realtime-DB\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\values-hdpi-v4\\values-hdpi-v4.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 327
                 },
                 "from": {
-                    "file": "D:\\git-NickIliev\\cosmos-firebase\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "file": "D:\\git-NickIliev\\NativeScript-Firebase-Realtime-DB\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

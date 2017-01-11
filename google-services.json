@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "603693984069",
+    "firebase_url": "https://cosmos-5cbb2.firebaseio.com",
+    "project_id": "cosmos-5cbb2",
+    "storage_bucket": "cosmos-5cbb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603693984069:android:3c6f3507b263d695",
+        "android_client_info": {
+          "package_name": "org.nativescript.cosmosfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603693984069-p4n0rgqgvfhab5fev1oah99bcjepiud9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAerrSEADJg63YpD7Yg7JgaFmgMMPnNzR0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -19,12 +19,20 @@ exports.lowMemoryEvent = "lowMemory";
 exports.uncaughtErrorEvent = "uncaughtError";
 exports.orientationChangedEvent = "orientationChanged";
 exports.cssFile = "app.css";
+function setCssFileName(cssFileName) {
+    exports.cssFile = cssFileName;
+}
+exports.setCssFileName = setCssFileName;
 exports.appSelectors = [];
 exports.additionalSelectors = [];
 exports.cssSelectors = [];
 exports.cssSelectorVersion = 0;
 exports.keyframes = {};
 exports.resources = {};
+function setResources(res) {
+    exports.resources = res;
+}
+exports.setResources = setResources;
 exports.onUncaughtError = undefined;
 exports.onLaunch = undefined;
 exports.onSuspend = undefined;

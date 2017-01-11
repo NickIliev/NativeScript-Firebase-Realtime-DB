@@ -111,6 +111,10 @@ function promptQuestions() {
         description: 'Are you using Firebase Messaging (y/n)',
         default: 'n'
     }, {
+        name: 'crash_reporting',
+        description: 'Are you using Firebase Crash Reporting (y/n)',
+        default: 'n'
+    }, {
         name: 'storage',
         description: 'Are you using Firebase Storage (y/n)',
         default: 'n'
@@ -191,13 +195,15 @@ function writePodFile(result) {
     }
     try {
         fs.writeFileSync(directories.ios + '/Podfile',
-`pod 'Firebase', '~> 3.9.0'
+`pod 'Firebase', '~> 3.11.0'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
-pod 'Firebase/Crash'
 
 # Uncomment if you want to enable Remote Config
 ` + (isSelected(result.remote_config) ? `` : `#`) + `pod 'Firebase/RemoteConfig'
+
+# Uncomment if you want to enable Crash Reporting
+` + (isSelected(result.crash_reporting) ? `` : `#`) + `pod 'Firebase/Crash'
 
 # Uncomment if you want to enable FCM (Firebase Cloud Messaging)
 ` + (isSelected(result.messaging) ? `` : `#`) + `pod 'Firebase/Messaging'
@@ -245,29 +251,31 @@ repositories {
 
 dependencies {
     // make sure you have these versions by updating your local Android SDK's (Android Support repo and Google repo)
-    compile "com.google.firebase:firebase-core:9.8.+"
-    compile "com.google.firebase:firebase-database:9.8.+"
-    compile "com.google.firebase:firebase-auth:9.8.+"
-    compile "com.google.firebase:firebase-crash:9.8.+"
+    compile "com.google.firebase:firebase-core:10.0.+"
+    compile "com.google.firebase:firebase-database:10.0.+"
+    compile "com.google.firebase:firebase-auth:10.0.+"
 
     // for reading google-services.json and configuration
-    def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : '9.8.+'
+    def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : '10.0.+'
     compile "com.google.android.gms:play-services-base:$googlePlayServicesVersion"
 
     // Uncomment if you want to use 'Remote Config'
-    ` + (isSelected(result.remote_config) ? `` : `//`) + ` compile "com.google.firebase:firebase-config:9.8.+"
+    ` + (isSelected(result.remote_config) ? `` : `//`) + ` compile "com.google.firebase:firebase-config:10.0.+"
+
+    // Uncomment if you want to use 'Crash Reporting'
+    ` + (isSelected(result.crash_reporting) ? `` : `//`) + ` compile "com.google.firebase:firebase-crash:10.0.+"
 
     // Uncomment if you want FCM (Firebase Cloud Messaging)
-    ` + (isSelected(result.messaging) ? `` : `//`) + ` compile "com.google.firebase:firebase-messaging:9.8.+"
+    ` + (isSelected(result.messaging) ? `` : `//`) + ` compile "com.google.firebase:firebase-messaging:10.0.+"
 
     // Uncomment if you want Google Cloud Storage
-    ` + (isSelected(result.storage) ? `` : `//`) + ` compile 'com.google.firebase:firebase-storage:9.8.+'
+    ` + (isSelected(result.storage) ? `` : `//`) + ` compile 'com.google.firebase:firebase-storage:10.0.+'
 
     // Uncomment if you need Facebook Authentication
     ` + (isSelected(result.facebook_auth) ? `` : `//`) + ` compile "com.facebook.android:facebook-android-sdk:4.+"
 
     // Uncomment if you need Google Sign-In Authentication
-    ` + (isSelected(result.google_auth) ? `` : `//`) + ` compile "com.google.android.gms:play-services-auth:9.8.+"
+    ` + (isSelected(result.google_auth) ? `` : `//`) + ` compile "com.google.android.gms:play-services-auth:$googlePlayServicesVersion"
 
 }
 
