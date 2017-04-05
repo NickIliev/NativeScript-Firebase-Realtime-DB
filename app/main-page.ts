@@ -25,7 +25,7 @@ export function setValue() {
 export function updateValue() {
     firebase.update(
         '/owner',
-        { name: "Nikolay P. Iliev" }
+        { name: "Nikolay Pl. Iliev" }
     ).then(() => {
         console.log("value updated!");
     })
