@@ -31,16 +31,6 @@ export function updateValue() {
     })
 }
 
-// create new value and update data
-// export function updateValueByKey() {
-//     firebase.update(
-//         '/owner/name',
-//         "Native Nick"
-//     ).then(() => {
-//         console.log("value updated!");
-//     })
-// }
-
 // creatunbg new key for existing value and updating the data
 export function updateValueNoOverwritting() {
     firebase.update(
