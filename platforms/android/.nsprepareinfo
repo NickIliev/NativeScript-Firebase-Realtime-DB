@@ -1,7 +1,9 @@
 {
-	"time": "Wed Apr 05 2017 16:34:45 GMT+0300 (FLE Daylight Time)",
+	"time": "Tue Dec 26 2017 10:18:14 GMT+0200 (FLE Standard Time)",
+	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
 	"changesRequireBuild": true,
-	"changesRequireBuildTime": "Wed Apr 05 2017 16:34:45 GMT+0300 (FLE Daylight Time)"
+	"projectFileHash": "56441e821a2231c0c2872cf4e303e311f90fe414705d495a6663e89bca8a00a8",
+	"changesRequireBuildTime": "Tue Dec 26 2017 10:18:14 GMT+0200 (FLE Standard Time)"
 }
