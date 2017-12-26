@@ -2,200 +2,175 @@
 <items version="2" >
 
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\cosmosfirebase\runtime\unspecified\jars\libs\binding-generator.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\5f3f24471365ef38f4bec2462e2f0c2f8b521326\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="d82f3ca98719f09b65db6aeaf450ad3bafc46e81">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\binding-generator_994ecb8ae8768d2e5a7f28629602f451bc6191a0.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="6e6b94b72d7912a627fb1629c310b2bca9261f06">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_50ea706e63905ecb7d9f8e2e4d0ec972fdc44f4d.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\10.2.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.7.2\20f6463eb19ac61960c5d91a094c2f4f0727dc2e\okhttp-2.7.2.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="3d6951cb416ebf8c66a32b9480808ca247b68344">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-iid-10.2.0_642322305e53830cf8efd575d0998a78056e7f00.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="20f6463eb19ac61960c5d91a094c2f4f0727dc2e">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\okhttp-2.7.2_a2afed2e6549504e47fcd325022ee1d6d78b0c96.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\widgets-release\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="8a73b09319cc3945912970487ced4c7724acc97d">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-widgets-release_f82953fec698ded996ee61d55732568d8910de8c.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\okio-1.6.0_457e5bb040670ccc3867eab9705b028fa3b88c95.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\d1c3c6a71795af5dfee99231e171260c07f680c3\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-animated-vector-drawable-25.3.0_fc51f46abc81a56751890195640f657c34b0a0b7.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="bc0d71e8828a145ca4aebde8f6897608070f8863">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_e5d464ea553a7bef7ce97c518578ac7ce9e93346.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\8f21cb4184e8378bb87a15d3f567c1d700e769bc\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-recyclerview-v7-25.3.0_69a8ca17b2c519643f432e7fc5cda132d714cf42.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_bb24ec276d22b5aad36ef6aed94e90d762f68e7d.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.android.support\design\25.3.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\e610e8b54ea22c60e0e9a40b50268e76acb760e5\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-design-25.3.0_cc0a6397b6f7620abda0e3ea5a88c62cae9956b8.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="8040d53ecd4bd895360eafdc25e1c1cc9479e6aa">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_ddf8444e4f17d0a37a2a3c201bb065638a057d64.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-database\10.2.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\ffa21c2069f88fd5b9fb1d799a87bd345cb152a0\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="94fca868854457ede6df15c902938468c71d579e">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-database-10.2.0_7591a0fe61f3a700d97ca71a19c6cd840a6edf54.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="5f519b8c692038a47ee404b6ea6b847f6402000c">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_359c8953cc0af860977734f6f694d2be7a8bddd3.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\af0e10dcac5ac97a6c36b6ad9f06a34f61f6265a\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-v4-25.3.0_509c67672779ee0fe273e45f39061b8d03138a59.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_e3170ce9597de1077f3836b352225fcb7ebbf224.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\cosmosfirebase\runtime\unspecified\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\1f82e5a8cbf1bfa35736ef591eca576156c3036e\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="632bf39700c28ba66c117628dab343126ef89551">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\cosmosfirebase-runtime-unspecified_9f72f3fd82daddc091cfe0eaa7211317f09e248b.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="2d45b277afdf55bcfdc005c03c0c2f1733aaa1b0">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_a402de13b7879ea8336531c6b73d6b459c92a75a.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.2.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\06859b80c53cebac3b8f84e5aa64c34203b6e2ba\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.android.gms-play-services-base-10.2.0_6d89ef77f1ce95aafbaddaacd01a09764198a024.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="643a2fd3bd06c44be5d20efc0ba4ca02036d2c8a">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_cd6f2a14845d21fd1a000fa8f861be6dcf8dbef1.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\10.2.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\938727f6f025ab0603e850793af317bbb93d2200\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="a61e7010aa7be5da53cd1bc5279630510c9a4912">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-analytics-10.2.0_e0b374072c4ca3f78ee86489faca37b0a516f991.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="c2cadea4d8a1a5b5c4e5f0dc99a99a43774f5e6e">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_cb64577029aef101b57a0e99f22ebb7023061974.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-common\10.2.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\19812275790cf5a98f66153e9f6b58d34c6317f1\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="0d5cbbbfe040201c7569478b70a13b58fd11aab4">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-common-10.2.0_90a49e687684eb3c28112af4be4c33833590b8cf.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="fe66404378d7791a232cc3331811b2ce402f44c7">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_be84591c50ba6e82cc979487bf55a23d2b9510f0.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.2.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\5128c4bc7d34c4417c3902aec3160f6b978fd170\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.android.gms-play-services-tasks-10.2.0_c3e7d46298ffe04d9f19d2d6e2e32d34cfad80e3.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="52339832d252da4328c5ffcacbc205268346362a">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_cb5a4480d0baee9b453fcaf79c2a26526cef69c3.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\firebase-release\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\dbdedcfc43e2ae3edc591072230c1074a121bea8\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="c9516c20ad330d844b3275d9c3acb0b798b6d8ae">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-firebase-release_b37f8b2dc2e643fedd2c56da2a131cc6ef6a5999.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="20d6aa9a18ea9833cd2bee95dff7cd303cdb80e4">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_c5485fb3081cf703e53d1e99e20764a52bc708e1.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\10.2.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\2c90a22415bc99320b1aab5aa567e86e5ed16603\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="48532a016bb0dfbe7970c147ce784598a515406b">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-auth-10.2.0_86b3236552626e43e17e938fee3e33ecacac29ef.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="aebd345a61f563da0989cbd014479c8bf7bd77ab">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_5c29ee316eeeb2c877791b50eb618cb044031209.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\20.0\89507701249388e1ed5ddcf8c41f4ce1be7831ef\guava-20.0.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-media-compat-25.3.0_a52c1002ef39a3bc27fcb588c6d0f6613c4a1780.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="89507701249388e1ed5ddcf8c41f4ce1be7831ef">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\guava-20.0_7675b918a9ffb5fce1a70009b9ddf4e5990764b5.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\24ad596407291c5ad8c6ae912fb3b15e4bfa85c6\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-vector-drawable-25.3.0_1f646b04b4e7596ec4733aa80f18a209b3f21e39.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="bed98ea7af8c5c4202820875e856dd3eb296e22d">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_9a1ad23a4eceba0f606d6b9b7ca2c682dac20d0f.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.android.support\transition\25.3.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.2\3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf\gson-2.8.2.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-transition-25.3.0_3f5bd3dcddc988b1ea7921315a03f04a1a4aee92.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\gson-2.8.2_be1cc5635833dc0b5687d59f56fa9b296c364741.jar" />
     </item>
     <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\niliev\.android\build-cache\1d073ef91e8143c22538f616ddda520f32010246\output\jars\classes.jar"
         jumboMode="false"
-        revision="25.0.2"
-        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-appcompat-v7-25.3.0_3050760d621acbb33bcb7308ef4162a073ddb6dc.jar" />
-    </item>
-    <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-core-ui-25.3.0_17b7105c9a7e42f7e16c8ac482bf3753acee6221.jar" />
-    </item>
-    <item
-        jar="D:\INSTALLED\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\support-annotations-25.3.0_7f09c262beb87f0bccd6390612abfb232d7e45cd.jar" />
-    </item>
-    <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="518768f3200963fbfec652f498da2c9d39245234">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-core-utils-25.3.0_a72abe2f42645d0a9e0248e802048d4b34b21292.jar" />
-    </item>
-    <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\10.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="ce9112e08a027c8620ae693983e38cdbb9f6371b">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-analytics-impl-10.2.0_d4fbe1060daa2d3213060e03218aa29f873d311d.jar" />
-    </item>
-    <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\10.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="0e301f24b283f14b564f660c9abe863af6be5896">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.firebase-firebase-database-connection-10.2.0_006f2ed90e3637fb01c5c40b4475193f8b967953.jar" />
-    </item>
-    <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-compat-25.3.0_25a2b68c963704b087dfcf5acfda497d00d39979.jar" />
-    </item>
-    <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="1ac56e5801e986583cbe27f2cce57f626cc7ff93">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.google.android.gms-play-services-basement-10.2.0_62b2cbe0774c834fd34a395a3081b4a9b5d75796.jar" />
-    </item>
-    <item
-        jar="C:\Users\niliev\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\gson-2.8.0_a6f70a087421acc19a38830080ae35640da58263.jar" />
-    </item>
-    <item
-        jar="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="25.0.2"
-        sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
-        <dex dex="D:\git-NickIliev\NativeScript-Firebase-Realtime-DB\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-fragment-25.3.0_d2c123d0be80ae5df720f5952c27b98818925e0a.jar" />
+        optimize="true"
+        revision="26.0.2"
+        sha1="73c80b05a390e8319d1ef7a236739cd610c8f774">
+        <dex dex="D:\repositories\NativeScript-Firebase-Realtime-DB\platforms\android\app\build\intermediates\pre-dexed\F0\debug\classes_f2b9316b72eb4b298a0662d327db73629f645a3d.jar" />
     </item>
 
 </items>

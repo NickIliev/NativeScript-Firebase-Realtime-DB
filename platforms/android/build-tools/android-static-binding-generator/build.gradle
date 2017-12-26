@@ -4,81 +4,101 @@
 
 import groovy.json.JsonSlurper
 import groovy.io.FileType
+import java.nio.charset.StandardCharsets
+import java.nio.file.Files
+import java.nio.file.Paths
 
-def isWinOs = System.properties['os.name'].toLowerCase().contains('windows')
-
-def astParserDir = "$projectDir/parser"
 def interfaceNamesFileP = "$projectDir/interfaces-names.txt"
 def bindingsFileP = "$projectDir/bindings.txt"
 def cachedJarsFilePath = "$projectDir/cached.txt"
 def jsParserP = "$projectDir/parser/js_parser.js"
 def jsFilesParametersP = "$projectDir/jsFilesParameters.txt"
 
+def webpackWorkersExcludePath = "$rootDir/app/src/main/assets/app/__worker-chunks.json"
+def webpackWorkersExcludesList = [];
 
-
-//def absoluteOutDir = new File("./outDir")//project.outDir
+def workersExcludeFile = file(webpackWorkersExcludePath);
+if (workersExcludeFile.exists()) {
+	// in case the file exists but is malformed
+	try {
+		webpackWorkersExcludesList = new JsonSlurper().parseText(workersExcludeFile.text)
+	} catch (all) {
+		println "Malformed workers exclude file at ${webpackWorkersExcludePath}"
+	}
+}
 
 def absoluteOutDir;
 if (project.hasProperty("outDir")) {
 	absoluteOutDir = project.outDir;
-	
+
 	if (!absoluteOutDir.exists()) {
 		absoluteOutDir.mkdirs()
 	}
 }
 
-
 // def absoluteJsCodeDir = new File("./jsCodeDir").getAbsolutePath()//project.jsCodeDir
 def absoluteJsCodeDir;
 def jsCodeAbsolutePath;
 if (!project.hasProperty("test")) {
-	absoluteJsCodeDir = project.jsCodeDir
-	jsCodeAbsolutePath = absoluteJsCodeDir.getAbsolutePath()
+	println project.jsCodeDir.equals(null)
+	if(project.jsCodeDir.exists()) {
+		absoluteJsCodeDir = project.jsCodeDir
+		jsCodeAbsolutePath = absoluteJsCodeDir.getAbsolutePath()
+	} else {
+		logger.log(LogLevel.WARN, "The input jsCodeDir: ${jsCodeDir} folder could not be found. Please make sure you've passed the correct folder containing the .js files that need to be parsed.");
+	}
 }
 
-def utf8 = java.nio.charset.StandardCharsets.UTF_8
-def current = ""
+def utf8 = StandardCharsets.UTF_8
+def jarsList = ""
 
 def shouldRun = true
 def rootTraversed = false;
 def inputJsFiles = new LinkedList <String> ();
 
 // depends on passed jars and generated interface-names
-task generateInterfaceNamesList() {
-
+task generateInterfaceNamesList {
 	doFirst {
 		if(!project.hasProperty("test")) {
-			current = project.jarFiles
+			jarsList = project.jarFiles
 			def cache = new File(cachedJarsFilePath)
-			
+
 			if (cache.exists()) {
 				def contents = new String(java.nio.file.Files.readAllBytes(java.nio.file.Paths.get(cachedJarsFilePath)), utf8).trim()
-				shouldRun = !contents.equals(current.toString())
+				shouldRun = !contents.equals(jarsList.toString())
 			}
 
 			if (shouldRun) {
 				javaexec {
 					main "-jar"
 
-					def jarsAsStr = current.toString();
+					def jarsAsStr = jarsList.toString();
 					def jarsArr = jarsAsStr.replaceAll(/[\[\]]/, "").split(", ")
 
 					def str = new LinkedList <String> ();
 					str.add("interfacenamegenerator.jar")
 					str.addAll(jarsArr)
 
+					logger.info("Task: generateInterfaceNamesList: Call interfacenamegenerator.jar with arguments: " + str.toString().replaceAll(',', ''))
+
 					args str.toArray()
 				}
-				java.nio.file.Files.write(java.nio.file.Paths.get(cachedJarsFilePath), [current.toString()], utf8)
+				Files.write(Paths.get(cachedJarsFilePath), [jarsList.toString()], utf8)
 			}
 		}
 	}
 }
 
+def isJsFile = { fileName -> return fileName.substring(fileName.length() - 3, fileName.length()).equals(".js") }
+
+def isWorkerScript = { fileName ->
+	// Read __worker-chunks.json file containing a list of webpacked workers
+	// ignore worker scripts, so as to not attempt to generate bindings for them
+	return webpackWorkersExcludesList.any{element -> file(element).getAbsolutePath() == fileName}
+}
+
 def traverseDirectory
-
 traverseDirectory = { dir, traverseExplicitly ->
-
 	def currentDir = new File(dir)
 	def pJsonFile = false;
 
@@ -99,7 +119,7 @@ traverseDirectory = { dir, traverseExplicitly ->
 				return;
 			} else {
 				if (pjson.nativescript['recursive-static-bindings']) {
-					// println "Folder will be traversed completely: " + dir
+					logger.info("Task: traverseDirectory: Folder will be traversed completely: " + dir)
 					traverseExplicitly = true;
 				}
 			}
@@ -111,10 +131,9 @@ traverseDirectory = { dir, traverseExplicitly ->
 	}
 
 	currentDir.eachFile(FileType.FILES) { File f ->
-		def file = f.getAbsolutePath();
-		if (file.substring(file.length() - 3, file.length()).equals(".js")) {
-			// println "Visiting JavaScript file: " + f.getName()
-			inputJsFiles.add(f.getAbsolutePath())
+		def currFile = f.getAbsolutePath();
+		if (isJsFile(currFile) && !isWorkerScript(currFile)) {
+			inputJsFiles.add(currFile)
 		}
 	}
 
@@ -123,31 +142,34 @@ traverseDirectory = { dir, traverseExplicitly ->
 	}
 }
 
-task traverseJsFilesArgs << { //(jsCodeDir, bindingsFilePath, interfaceNamesFilePath, jsParserPath, jsFilesParameter) {
-	jsCodeAbsolutePath = jsCodeDir;
-	inputJsFiles = new LinkedList<String>();
-	traverseDirectory(jsCodeDir, false);
+task traverseJsFilesArgs { //(jsCodeDir, bindingsFilePath, interfaceNamesFilePath, jsParserPath, jsFilesParameter) {
+	doLast {
+		jsCodeAbsolutePath = jsCodeDir;
+		inputJsFiles = new LinkedList<String>();
+		traverseDirectory(jsCodeDir, false);
 
-	new File(jsFilesParameter).withWriter { out ->
-		inputJsFiles.each {out.println it}
-	}
+		new File(jsFilesParameter).withWriter { out ->
+			inputJsFiles.each {out.println it}
+		}
 
-	def list = new ArrayList<String>();
-	list.add("node")
-	list.add(jsParserPath)
-	list.add(jsCodeDir)
-	list.add(bindingsFilePath)
-	list.add(interfaceNamesFilePath)
-	list.add(jsFilesParameter)
+		def list = new ArrayList<String>();
+		list.add("node")
+		list.add(jsParserPath)
+		list.add(jsCodeDir)
+		list.add(bindingsFilePath)
+		list.add(interfaceNamesFilePath)
+		list.add(jsFilesParameter)
 
-	def proc = list.execute()
-	proc.in.eachLine { line -> println line }
-	proc.out.close()
-	proc.waitFor()
+		logger.info("Task: traverseJsFilesArgs: executed with arguments: " + list.toString().replaceAll(',', ''))
+		def proc = list.execute()
+		proc.in.eachLine { line -> println line }
+		proc.out.close()
+		proc.waitFor()
 
-	if (proc.exitValue()) {
-		println "gave the following error: "
-		println "[ERROR] ${proc.getErrorStream()}"
+		if (proc.exitValue()) {
+			println "gave the following error: "
+			println "[ERROR] ${proc.getErrorStream()}"
+		}
 	}
 }
 
@@ -168,8 +190,11 @@ task runAstParser(type: RunAstParserTask) {
 // traverses the javascript code input directory
 // 1. traverses all root directory files
 // 2. all subdirectories that do not have a package.json containing a "nativescript" key are skipped
-task traverseJsFiles () {
+task traverseJsFiles {
 	doFirst {
+		// invalidate previously generated bindings.txt file
+		// todo: remove when removing previously generated bindings is implemented
+		new File(bindingsFileP).delete()
 		traverseDirectory(jsCodeAbsolutePath, false)
 	}
 }
@@ -232,6 +257,10 @@ class RunAstParserTask extends DefaultTask {
 		list.add(interfaceNamesFilePath)
 		list.add(jsFilesParametersPath)
 
+		if(project.gradle.startParameter.logLevel.equals(LogLevel.DEBUG)) {
+			list.add("enableVerboseLogging")
+		}
+		logger.info("Task: RunAstParserTask: running node with arguments: " + list.toString().replaceAll(',', ''))
 		runCommand(list)
 
 		// inputs.removed { change ->
@@ -248,6 +277,10 @@ task generateBindings() {
 	inputs.dir (bindingsFile)
 
 	doFirst {
+		if (!file(bindingsFileP).exists()) {
+			throw new GradleException("No ${bindingsFileP} was found after runAstParser task was ran! Check to see if there are any .js files inside ${jsCodeDir}")
+		}
+
 		javaexec {
 			main "-jar"
 
@@ -256,10 +289,11 @@ task generateBindings() {
 			str.add(bindingsFileP)
 			str.add(absoluteOutDir)
 
-			def jarsAsStr = current.toString();
+			def jarsAsStr = jarsList.toString();
 			def jarsArr = jarsAsStr.replaceAll(/[\[\]]/, "").split(", ")
 			str.addAll(jarsArr)
 
+			logger.info("Task generateBindings: Call staticbindinggenerator.jar with arguments: " + str.toString().replaceAll(',', ''))
 			args str.toArray()
 		}
 	}
